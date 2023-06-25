@@ -1,0 +1,25 @@
+.card{
+    text-align: center;
+    margin: 2rem;
+    padding: 1rem;
+    height:530px;
+    width: 260px;
+    border:1px solid black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card >img{
+    margin-top: 10%;
+    align-content: center;
+    width: 80%;
+}
+
+.card > h1{
+    font-weight:bolder;
+    font-size:larger;
+    text-align: center;
+}
+
+.card > .author{
+    font-weight: lighter;
+}
