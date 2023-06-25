@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import Shimmer_detail from "./Shimmer_detail";
+
 import "../style/bookdetails.css"
 const Bookdetails=()=>{
 
@@ -20,8 +22,8 @@ const Bookdetails=()=>{
       }
 
 
-        if(!data)
-       return <h1>NO data...!! wait...!!</h1>
+        if(data.length===0)
+       return <Shimmer_detail/>
 
        return (
         <div className="detail">

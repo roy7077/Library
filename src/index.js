@@ -5,6 +5,8 @@ import './index.css';
 import App from './App';
 import Bookdetails from './components/Bookdetails';
 import Body from './components/Body';
+import Contact from './components/Contact';
+import About from './components/About';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -25,6 +27,14 @@ const approuter=createBrowserRouter([
     {
       path:"/Bookdetails/:id",
       element:<Bookdetails/>
+    },
+    {
+      path:"/contact",
+      element:<Contact/>
+    },
+    {
+      path:"/about",
+      element:<About/>
     }
     ]
   }

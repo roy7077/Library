@@ -2,6 +2,7 @@ import { useState,useEffect } from "react";
 import { Link } from "react-router-dom";
 import Cardlist from "./Cardlist"
 import "../style/body.css"
+import Shimmer_home from "./Shimmer_home";
 
 const Body=()=>{
 
@@ -17,12 +18,12 @@ const Body=()=>{
       const response = await fetch("https://www.googleapis.com/books/v1/volumes?q="+find+"&key=AIzaSyD7Npb6OLdapjI1v5p-TzPQ6WbSSn_ib3I");
       const jsn = await response.json();
       setbooks(jsn?.items);
-      console.log(jsn?.items);
+      //console.log(jsn?.items);
     }
 
-   if(!getbooks)
-   return <h1>Pleas search for book.......!!! </h1>
-
+   if(getbooks.length===0)
+   return <Shimmer_home/>
+   
   return (
     <div>
      <div className="input">
@@ -48,6 +49,7 @@ const Body=()=>{
       className="button-3"
 
        onClick={()=>{
+         setbooks([]);
          setfind(searchText);
        }}
       >Search</button>

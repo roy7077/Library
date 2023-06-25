@@ -1,0 +1,44 @@
+.shimmer-detail{
+    padding: 4rem;
+    display: flex;
+}
+
+.shimmer-deail-img{
+    border-radius: 10%;
+    height: 400px;
+    width: 400px;
+    background-color: rgb(212, 207, 207);
+}
+
+.shimmer-deail-info{
+    background-color: rgb(212, 207, 207);
+    height: 400px;
+    width: 60%;
+    margin-left: 40px;
+}
+
+
+/*-------responsive-------*/
+
+@media screen and (max-width:700px){
+   
+    .shimmer-detail{
+        padding: 10px;
+        margin-top: 3rem;
+        display: block;
+    }
+
+    .shimmer-deail-img{
+        text-align: center;
+        height: 300px;
+        width: 300px;
+    }
+
+    .shimmer-deail-info{
+        margin-left: 0px;
+        margin-top: 50px;
+        height: 400px;
+        width: 300px;
+    }
+
+}
